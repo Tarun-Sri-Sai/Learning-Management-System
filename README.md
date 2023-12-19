@@ -1,16 +1,67 @@
 # Learning Management System
 
-A learning management system built using React.
-
 ## Requirements
 
-- Node.js: v20.0.0+
-- npm: Compatible with Node.js
+- `node`: v20.5.1
+- `npm`: v9.8.0
+- `npx`: v9.8.0
+- `python`: v3.12.1
+- `pip`: v23.2.1
+
+## Installation
+
+1. Install create-vite using npm:
+
+    ```bash
+    npm install -g create-vite
+    ```
+
+1. Go to `frontend` and create a `.env`:
+
+    ```dotenv
+    VITE_SERVER_URL=http://localhost:5174
+    ```
+
+1. In the same folder, run:
+
+    ```bash
+    npm install
+    ```
+
+1. At the root of the project, run:
+
+    ```bash
+    python -m venv backend
+    ```
+
+1. Go to `backend` and create a `.env`:
+
+    ```dotenv
+    FLASK_HOST=127.0.0.1
+    FLASK_PORT=5174
+    MONGODB_CONNECTION_STRING=your-mongodb-connection-string
+    ```
+
+1. In the same folder, run:
+
+    ```bash
+    Scripts/activate
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-- Type the following command
+1. Go to `backend` and run:
 
-  ```bash
-  npm install -g vite@5.0.10
-  ```
+    ```bash
+    Scripts/activate
+    python src/server.py
+    ```
+
+1. Go to `frontend` and run:
+
+    ```bash
+    npm run dev
+    ```
+
+1. Go to `localhost:5173` to access the site.
